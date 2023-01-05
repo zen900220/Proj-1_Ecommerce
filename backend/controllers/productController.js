@@ -1,6 +1,6 @@
 const Product = require("../database/models/productModel.js");
 const catchAsyncError = require("../middleware/catchAsyncError.js");
-const ApiFeatures = require("../utils/apiFeatures.js");
+const ApiFeatures = require("../utils/ApiFeatures");
 const CustomError = require("../utils/CustomError.js");
 const cloudinary = require("cloudinary");
 
