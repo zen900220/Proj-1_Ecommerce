@@ -1,14 +1,15 @@
 const cookieParser = require("cookie-parser");
 const express = require("express");
-const dotenv = require("dotenv");
 const errorHandler = require("./middleware/errorHandler");
 const path = require("path");
 const app = express();
 
 //ANCHOR Config
-dotenv.config({
-  path: "backend/config/config.env",
-});
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  require("dotenv").config({
+    path: "backend/config/config.env",
+  });
+}
 
 //Middleware to parse requests with application/json encoding
 app.use(

@@ -1,5 +1,4 @@
 const app = require("./app.js");
-const dotenv = require("dotenv");
 const dbFuncs = require("./database/dbFunctions.js");
 const cloudinary = require("cloudinary");
 
@@ -11,9 +10,14 @@ process.on("uncaughtException", (err) => {
 });
 
 //ANCHOR Config
-dotenv.config({
-  path: "backend/config/config.env",
-});
+//in local development the env variables are stored in config.env and they are used by dotenv to configure process.env
+//On hosting these variables will be set using the tools provided by the hosting service and config file wont be uploaded neither will it be tracked by git.
+//dotenv only works when developing.
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  require("dotenv").config({
+    path: "backend/config/config.env",
+  });
+}
 
 //ANCHOR Connecting to DB
 dbFuncs.connect();
