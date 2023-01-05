@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./backend/server.js",
     "dev": "nodemon ./backend/server.js",
-    "set-up": "NPM_CONFIG_PRODUCTION=false && npm install --force --prefix frontend && npm build frontend"
+    "set-up": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm build --prefix frontend"
   },
   "author": "",
   "license": "ISC",
