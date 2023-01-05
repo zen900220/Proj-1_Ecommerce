@@ -1,0 +1,55 @@
+html {
+  scroll-behavior: smooth;
+  /* essential for creating a scrollbar with transparent background */
+  overflow: overlay;
+  cursor: url("./images/cursor.png"), auto;
+}
+
+::-webkit-scrollbar {
+  /* width only applies to vertical bars nd height to horizontal bars */
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 99, 71, 1);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+/* Hide arrows in input type number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Multiuse Classes and Styles  */
+
+.greenColor {
+  color: green !important;
+}
+
+.redColor {
+  color: red !important;
+}

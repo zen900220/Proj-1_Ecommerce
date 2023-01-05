@@ -1,0 +1,12 @@
+/* Class found in all the lines connecting each mui step */
+.MuiStepConnector-root {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.349);
+}
+
+/*Class of line connecting from any step TO an active step*/
+.MuiStepConnector-active,
+/*Class of line connecting from any step TO an completed step*/
+.MuiStepConnector-completed {
+  background-color: tomato;
+}

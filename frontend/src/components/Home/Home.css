@@ -1,0 +1,74 @@
+.banner {
+  background-image: url("../../images/cover_blur.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vmin;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.banner > h1 {
+  margin: 5vmax;
+  font: 600 2.5vmax "Roboto";
+}
+
+.banner > p {
+  font: 300 1.4vmax "Lucida Sans";
+}
+
+.banner > a {
+  margin-bottom: 5vmax;
+}
+
+.banner > a > button {
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 0;
+  padding: 1vmax;
+  transition: all 0.5s;
+  width: 9vmax;
+  font: 500 1vmax "Roboto";
+}
+
+.banner > a > button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.banner::after {
+  content: "";
+  width: 100vw;
+  height: 100vmin;
+  background-color: white;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  max-width: 100%;
+  -webkit-clip-path: polygon(100% 83%, 0% 100%, 100% 100%);
+  clip-path: polygon(100% 83%, 0% 100%, 100% 100%);
+}
+
+.homeHeading {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.4vmax;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+  width: 20vmax;
+  padding: 1vmax;
+  margin: 5vmax auto;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin: 2vmax auto;
+  justify-content: space-evenly;
+  max-width: 100%;
+}

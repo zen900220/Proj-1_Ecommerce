@@ -1,0 +1,109 @@
+.cartPage {
+  padding: 5vmax;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.cartHeader {
+  background-color: tomato;
+  width: 90%;
+  box-sizing: border-box;
+  grid-template-columns: 4fr 1fr 1fr;
+  color: white;
+  margin: auto;
+  display: grid;
+  font: 300 0.7vmax "Roboto";
+}
+
+.cartHeader > p {
+  margin: 10px 0;
+}
+
+.cartHeader > p:nth-child(1) {
+  margin-left: 10px;
+}
+
+.cartContainer {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  grid-auto-rows: 8vmax;
+}
+
+.cartContainer:empty {
+  min-height: 80vh;
+}
+
+.cartContainer:empty::before {
+  content: "Cart is empty. Shop Now!";
+  font: 500 4vmax "Roboto";
+  color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartGrossProfit {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr 2fr;
+}
+
+.cartGrossProfitBox {
+  border-top: 3px solid tomato;
+  margin: 1vmax 4vmax;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  font: 300 1vmax "Roboto";
+}
+
+.checkOutBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6vmax;
+}
+
+.checkOutBtn > button {
+  background-color: tomato;
+  color: white;
+  border: none;
+  padding: 0.8vmax 4vmax;
+  border-radius: 30px;
+  cursor: pointer;
+  font: 300 0.8vmax "Roboto";
+}
+
+@media screen and (max-width: 600px) {
+  .cartPage {
+    padding: 0;
+  }
+  .cartHeader {
+    width: 100%;
+    font: 300 1.7vmax "Roboto";
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+  .cartContainer {
+    width: 100%;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-auto-rows: 25vmax;
+  }
+  .cartGrossProfit {
+    grid-template-columns: 0fr 0fr 1fr;
+  }
+  .cartGrossProfitBox {
+    padding-top: 2vmax;
+    font: 300 2vmax "Roboto";
+  }
+  .checkOutBtn > button {
+    font: 300 2vmax "Roboto";
+  }
+}

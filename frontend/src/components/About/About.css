@@ -1,0 +1,31 @@
+.about {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+  background-color: white;
+}
+
+.about > div {
+  width: 20vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about > div > a {
+  user-select: none;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font: 300 2.5vmax "Roboto";
+  background-color: tomato;
+  padding: 1vmax;
+  border-radius: 5px;
+  width: 100%;
+}

@@ -1,0 +1,123 @@
+.shippingContainer {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.shippingBox {
+  width: 25vw;
+  height: 90vh;
+  box-sizing: border-box;
+  background-color: white;
+  border: 3px solid tomato;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.25);
+}
+
+.shippingHeading {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.664);
+  font: 400 1.3vmax "Roboto";
+  padding: 1.3vmax;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+  width: 50%;
+  margin: auto;
+}
+
+.shippingForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax;
+  justify-content: space-between;
+  height: 80%;
+  transition: all 0.5s;
+}
+
+.shippingForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.shippingForm > div > :is(input, select) {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+  width: 100%;
+}
+
+.shippingForm > div > svg {
+  position: absolute;
+  transform: translate(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+/* :is takes a list of comma seperated selectors and checks if any of them matches */
+.shippingForm > div > svg:has(+ :is(input:focus, select:focus)) {
+  color: tomato;
+}
+
+.shippingBtn {
+  border: none;
+  background-color: tomato;
+  color: white;
+  font: 300 1vmax "Roboto";
+  width: 100%;
+  padding: 1vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  margin: 2vmax;
+  outline: none;
+}
+
+.shippingBtn:hover {
+  background-color: rgb(179, 66, 46);
+}
+
+@media screen and (max-width: 600px) {
+  .shippingBox {
+    width: 90vw;
+    height: unset;
+    box-shadow: unset;
+    border: unset;
+  }
+
+  .shippingHeading {
+    font: 400 6vw "Roboto";
+    padding: 5vw;
+  }
+
+  .shippingForm {
+    padding: 11vw;
+  }
+
+  .shippingForm > div {
+    margin: 1vmax;
+  }
+
+  .shippingForm > div > :is(input, select) {
+    padding: 5vw 10vw;
+    font: 300 4vw cursive;
+  }
+
+  .shippingForm > div > svg {
+    font-size: 6vw;
+    transform: translateX(3vw);
+  }
+
+  .shippingBtn {
+    font: 300 4vw "Roboto";
+    padding: 4vw;
+  }
+}

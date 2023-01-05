@@ -1,0 +1,79 @@
+.updateOrderForm {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+  margin: 5vmax 0;
+  padding: 2vmax;
+  /* min-height: 70%; */
+  transition: all 0.5s;
+  /* width: 50%; */
+}
+
+.updateOrderForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 3.5vmax;
+  margin: 25px 0;
+}
+
+.updateOrderForm > div > select {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+}
+
+.updateOrderForm > div > svg {
+  position: absolute;
+  transform: translate(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+.updateOrderForm > div > svg:has(+ select:focus) {
+  color: tomato;
+}
+
+#createProductBtn {
+  border: none;
+  background-color: tomato;
+  color: white;
+  font: 300 0.9vmax "Roboto";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+
+#createProductBtn:hover {
+  background-color: rgb(179, 66, 46);
+}
+
+@media screen and (max-width: 600px) {
+  .updateOrderForm > div {
+    height: 4.5vmax;
+  }
+
+  .updateOrderForm > div > svg {
+    font-size: 2vmax;
+  }
+
+  .updateOrderForm > div > :is(input, select, textarea) {
+    font-size: 1.5vmax;
+  }
+
+  #createProductBtn {
+    padding: 1.5vmax;
+    font-size: 1.5vmax;
+  }
+}

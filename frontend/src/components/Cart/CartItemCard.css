@@ -1,0 +1,121 @@
+.CartItemCard {
+  display: flex;
+  padding: 1vmax;
+  height: 8vmax;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.CartItemCard > img {
+  width: 5vmax;
+  max-height: 100%;
+}
+
+.CartItemCard > div {
+  display: flex;
+  margin: 0.3vmax 1vmax;
+  flex-direction: column;
+}
+
+.CartItemCard > div > a {
+  font: 300 0.9vmax cursive;
+  color: rgba(24, 24, 24, 0.815);
+  text-decoration: none;
+}
+
+.CartItemCard > div > span {
+  font: 300 0.9vmax "Roboto";
+  color: rgba(24, 24, 24, 0.815);
+}
+
+.CartItemCard > div > p {
+  color: tomato;
+  font: 100 0.8vmax "Roboto";
+  cursor: pointer;
+}
+
+.cartInput {
+  height: 8vmax;
+  display: flex;
+  align-items: center;
+}
+
+.cartInput > button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.616);
+  padding: 0.5vmax;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+}
+
+.cartInput > button:hover {
+  background-color: rgba(0, 0, 0, 0.767);
+}
+
+.cartInput > input {
+  border: none;
+  font: 400 0.8vmax "Roboto";
+  color: rgba(0, 0, 0, 0.74);
+  padding: 0.5vmax;
+  width: 3vmax;
+  outline: none;
+  text-align: center;
+}
+
+.cartSubtotal {
+  margin: 0;
+  display: flex;
+  padding: 0.5vmax;
+  color: rgba(0, 0, 0, 0.753);
+  align-items: center;
+  box-sizing: border-box;
+  font: 300 1vmax cursive;
+  height: 8vmax;
+}
+
+@media screen and (max-width: 600px) {
+  .CartItemCard {
+    padding: 3vmax;
+    height: 25vmax;
+  }
+
+  .CartItemCard > img {
+    width: 10vmax;
+  }
+
+  .CartItemCard > div {
+    margin: 1vmax 2vmax;
+  }
+
+  .CartItemCard > div > a {
+    font: 300 2vmax cursive;
+  }
+
+  .CartItemCard > div > span {
+    font: 300 1.9vmax "Roboto";
+  }
+
+  .CartItemCard > div > p {
+    font: 100 1.8vmax "Roboto";
+  }
+
+  .cartInput {
+    height: 25vmax;
+  }
+
+  .cartInput > button {
+    padding: 1.5vmax;
+  }
+
+  .cartInput > input {
+    padding: 1.5vmax;
+    font: 400 1.8vmax "Roboto";
+  }
+
+  .cartSubtotal {
+    height: 25vmax;
+    padding: 1.5vmax;
+    font: 300 2vmax "Roboto";
+  }
+}

@@ -1,0 +1,46 @@
+.sidebar {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+
+.sidebar > :is(a, .treeWrapper):first-child {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar > a:first-child > img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.sidebar > a:first-child > img:hover {
+  filter: drop-shadow(0 0 10px tomato);
+}
+
+.sidebar :is(a, .treeWrapper) {
+  text-decoration: none;
+  transition: all 0.5s;
+  color: rgba(0, 0, 0, 0.493);
+  margin: 2rem;
+  font: 200 1rem "Roboto";
+}
+
+.sidebar :is(a, .treeWrapper):hover {
+  color: tomato;
+  transform: scale(1.1);
+}
+
+.sidebar :is(a, .treeWrapper) > p {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar a > p > svg {
+  margin-right: 0.5rem;
+}
+
+.MuiTypography-root {
+  background-color: white !important;
+}

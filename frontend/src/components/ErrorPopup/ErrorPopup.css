@@ -1,0 +1,12 @@
+.error-screen {
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  background-color: black;
+  color: white;
+  z-index: 1000;
+  padding: 1vmax;
+  border: 1px solid tomato;
+  max-width: 30vw;
+}

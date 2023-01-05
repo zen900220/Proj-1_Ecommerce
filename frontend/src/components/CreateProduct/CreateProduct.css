@@ -1,0 +1,149 @@
+.newProductContainer {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: white;
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-direction: column;
+}
+
+.newProductContainer h1 {
+  color: rgba(0, 0, 0, 0.733);
+  font: 300 2rem "Roboto";
+  text-align: center;
+}
+
+.createProductForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  padding: 2vmax;
+  min-height: 70%;
+  transition: all 0.5s;
+  width: 50%;
+}
+
+.createProductForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 3.5vmax;
+  margin: 0.5vh 0;
+}
+
+.createProductForm > div > :is(input, select, textarea) {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+}
+
+.createProductForm > div > textarea {
+  resize: none;
+}
+
+.createProductForm > div > svg {
+  position: absolute;
+  transform: translate(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+.createProductForm
+  > div
+  > svg:has(+ :is(input:focus, select:focus, textarea:focus)) {
+  color: tomato;
+}
+
+#createProductBtn {
+  border: none;
+  background-color: tomato;
+  color: white;
+  font: 300 0.9vmax "Roboto";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+
+#createProductBtn:hover {
+  background-color: rgb(179, 66, 46);
+}
+
+#createProductFormFile > input {
+  padding: 0%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#createProductFormFile > input::file-selector-button {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  z-index: 2;
+  border: none;
+  font: 400 0.8vmax cursive;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+}
+
+#createProductFormFile > input::file-selector-button:hover {
+  color: tomato;
+  font-size: 1vmax;
+}
+
+#createProductFormImage {
+  max-width: 100%;
+  margin: 20px 0;
+  height: max-content;
+  overflow: auto;
+}
+
+#createProductFormImage > img {
+  width: 8vmax;
+  margin: 0 10px;
+  user-select: none;
+}
+
+@media screen and (max-width: 600px) {
+  .createProductForm > div {
+    height: 4.5vmax;
+  }
+
+  .createProductForm > div > svg {
+    font-size: 2vmax;
+  }
+
+  .createProductForm > div > :is(input, select, textarea) {
+    font-size: 1.5vmax;
+  }
+
+  #createProductFormImage > img {
+    width: 10vmax;
+  }
+
+  #createProductFormFile > input::file-selector-button {
+    font-size: 1.5vmax;
+  }
+
+  #createProductFormFile > input::file-selector-button:hover {
+    font-size: 1.8vmax;
+  }
+
+  #createProductBtn {
+    padding: 1.5vmax;
+    font-size: 1.5vmax;
+  }
+}

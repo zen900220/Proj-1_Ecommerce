@@ -1,0 +1,34 @@
+.notFound {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+  background-color: white;
+}
+
+.notFound > div {
+  height: 12vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notFound > div > div {
+  text-align: center;
+  font: 400 4vmax "Roboto";
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.notFound > div > a {
+  color: white;
+  text-decoration: none;
+  font: 300 2vmax "Roboto";
+  background-color: tomato;
+  padding: 1vmax;
+  border-radius: 5px;
+}
