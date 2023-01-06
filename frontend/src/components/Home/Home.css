@@ -40,6 +40,19 @@
   color: white;
 }
 
+.banner::before {
+  content: "";
+  width: 100vw;
+  height: 100vmin;
+  background-color: white;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  max-width: 100%;
+  -webkit-clip-path: polygon(100% 0, 0 0, 0 21%);
+  clip-path: polygon(100% 0, 0 0, 0 21%);
+}
+
 .banner::after {
   content: "";
   width: 100vw;
