@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "./NotFound.css";
 
 const NotFound = () => {
+  if (window.location.pathname === "/payment") {
+    window.location.replace("/payment");
+  }
+
   return (
     <div className="notFound">
       <div>
