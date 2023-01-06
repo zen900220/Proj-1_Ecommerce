@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./backend/server.js",
     "dev": "nodemon ./backend/server.js",
-    "set-up": "NPM_CONFIG_PRODUCTION=false && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend &&  npm install --legacy-peer-deps && npm start"
+    "set-up": "NPM_CONFIG_PRODUCTION=false && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend &&  npm install --legacy-peer-deps"
   },
   "author": "",
   "license": "ISC",
