@@ -9,6 +9,8 @@
   justify-content: center;
   align-items: center;
   color: white;
+  -webkit-clip-path: polygon(100% 0, 100% 75%, 0 100%, 0 25%);
+  clip-path: polygon(100% 0, 100% 75%, 0 100%, 0 25%);
 }
 
 .banner > h1 {
@@ -38,32 +40,6 @@
 .banner > a > button:hover {
   background-color: transparent;
   color: white;
-}
-
-.banner::before {
-  content: "";
-  width: 100vw;
-  height: 100vmin;
-  background-color: white;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  max-width: 100%;
-  -webkit-clip-path: polygon(100% 0, 0 0, 0 21%);
-  clip-path: polygon(100% 0, 0 0, 0 21%);
-}
-
-.banner::after {
-  content: "";
-  width: 100vw;
-  height: 100vmin;
-  background-color: white;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  max-width: 100%;
-  -webkit-clip-path: polygon(100% 83%, 0% 100%, 100% 100%);
-  clip-path: polygon(100% 83%, 0% 100%, 100% 100%);
 }
 
 .homeHeading {
